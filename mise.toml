@@ -1,8 +1,22 @@
 [tools]
 node = "24"
+"npm:esbuild" = "0.28.2"
+"npm:html-validate" = "9.7.1"
+jactionlint = "2.3.0"
+shellcheck = "0.11.0"
 
 [tasks.test]
 run = "node --test"
 
 [tasks.lint]
-run = "npx --yes html-validate@9.7.1 index.html"
+run = [
+  "html-validate index.html",
+  "jactionlint",
+]
+
+# JS を 1 本にまとめて HTML に埋め込み、dist/ に公開するファイルを作る
+[tasks.build]
+run = [
+  "esbuild main.js --bundle --minify --format=esm --target=es2022 --outfile=.build/app.js",
+  "node build.mjs",
+]

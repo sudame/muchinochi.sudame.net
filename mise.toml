@@ -1,0 +1,8 @@
+[tools]
+node = "24"
+
+[tasks.test]
+run = "node --test"
+
+[tasks.lint]
+run = "npx --yes html-validate@9.7.1 index.html"

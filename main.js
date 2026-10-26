@@ -145,4 +145,5 @@ button.addEventListener("click", regenerate);
 new ResizeObserver(fit).observe(stage);
 
 fit();
-regenerate();
+// 開いただけでは回さず、最初の 1 回は押してもらう
+button.disabled = false;

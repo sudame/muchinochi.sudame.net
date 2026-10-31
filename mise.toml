@@ -1,5 +1,5 @@
 [tools]
-node = "24"
+node = "26"
 "npm:esbuild" = "0.28.2"
 "npm:html-validate" = "11.17.0"
 jactionlint = "2.3.0"

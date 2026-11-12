@@ -1,7 +1,7 @@
 [tools]
 node = "26"
 "npm:esbuild" = "0.28.2"
-"npm:html-validate" = "11.19.0"
+"npm:html-validate" = "11.21.0"
 jactionlint = "2.5.0"
 shellcheck = "0.11.0"
 
